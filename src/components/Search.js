@@ -10,6 +10,8 @@ class Search extends Component {
         };
     }
     
+    
+
     render(){
         return(
             <div id="section2" >
@@ -27,6 +29,7 @@ class Search extends Component {
                         </div>
                         <div className="col-6" id="resultsBox">
                             <div id="resultsText">
+                                <b className="d-flex">Results</b>
                                 <ShowResults results={this.state.results}/>
                             </div>
                         </div>

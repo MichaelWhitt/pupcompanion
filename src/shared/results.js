@@ -1,17 +1,3 @@
-// export function CheckAllow(props){
-//     console.log(props.result.allowsDog)
-//     if (props.result.allowsDog === "Yes"){
-//         return(
-//         <div>
-//             <div>Allows Dog: <b>{props.result.allowsDog}</b></div>
-//             <div>Seating: <b>{props.result.seating}</b></div>
-//             <div>Feed Dog: <b>{props.result.feedDog}</b></div>
-//         </div>)
-//     } else {
-//         return <div>Allows Dog: <b>{props.result.allowsDog}</b></div>
-//     } 
-// }
-
 export const RESULTS = [
 
     {
@@ -34,8 +20,8 @@ export const RESULTS = [
         image: "https://theoven-lincoln.com/uploads/food-photo.jpg?_cchid=c0debe576f38736658d29e40f403bf3e",
         phone: "402-222-222",
         rating: "4.5/5",
-        allowsDog: "Yes",
-        seating: "Inside",
+        allowsDog: "No",
+        seating: "None",
         feedDog: "No",
         location: {
             addressStreet: "2222 south 22th", 

@@ -57,11 +57,11 @@ font-weight: 700;
 
 /*Section 2 "Search.js"*/
 #section2 {
-  background-color: #333;
+  background-color: #fff;
 }
 
 #searchDiv {
-  padding-top: 220px;
+  padding-top: 150px;
 }
 
 #instructionsText {
@@ -83,16 +83,16 @@ font-weight: 700;
   height: 600px;
   box-shadow: 0 0 5px white;
   border-radius: 15px;
-  border: 1px solid cyan;
   color: black;
 }
 
-#resultsCard:hover {
-  background: #eee;
+#resultCard {
+  margin-top: 10px;
 }
 
-#resultCard {
-  margin-top: 5px;
+#resultsCard:hover {
+  box-shadow: 0 0 15px #aaa;
+  transition-duration: .3s;
 }
 
 #resultImg{
@@ -101,9 +101,24 @@ font-weight: 700;
   margin: 5px;
   background-size: contain;
 }
+
+#resultRating{
+  color: red;
+}
+
+#resultsCard > div {
+  --bs-gutter-x: 0;
+  border-radius: 5px;
+}
+
 #resultVisual {
   border-right: 1px solid #aaa;
+  background: #eee; 
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
-#resultBody {
 
+#redX {
+  color: red;
+  font-size: 2rem;
 }
