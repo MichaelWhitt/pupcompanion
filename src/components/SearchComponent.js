@@ -22,6 +22,7 @@ function RenderResults({result}){
                             </Card.Header>
                             <Card.Body id="resultBody" className="row">
                                 <div className="col-6">
+                                    {/* {if (true) {return "hello"}} */}
                                     <div><b>Allows Dog: </b>{result.allowsDog}</div>
                                     <div><b>Seating: </b>{result.seating}</div>
                                     <div><b>Feed Dog: </b>{result.feedDog}<br/></div>
