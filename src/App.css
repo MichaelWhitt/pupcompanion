@@ -83,11 +83,27 @@ font-weight: 700;
   height: 600px;
   box-shadow: 0 0 5px white;
   border-radius: 15px;
-  border: 5px solid cyan;
-  color: red;
+  border: 1px solid cyan;
+  color: black;
 }
 
 #resultsCard:hover {
   background: #eee;
+}
+
+#resultCard {
+  margin-top: 5px;
+}
+
+#resultImg{
+  border-radius: 10px;
+  box-shadow: 0 0 5px #aaa;
+  margin: 5px;
+  background-size: contain;
+}
+#resultVisual {
+  border-right: 1px solid #aaa;
+}
+#resultBody {
 
 }
