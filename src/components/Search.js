@@ -11,7 +11,6 @@ class Search extends Component {
     }
     
     
-
     render(){
         return(
             <div id="section2" >
