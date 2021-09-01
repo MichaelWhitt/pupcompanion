@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tomtom-international/web-sdk-plugin-searchbox": "^3.1.11",
     "bootstrap": "5.1.0",
     "cra-template": "1.1.2",
     "react": "^17.0.2",
