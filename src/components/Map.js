@@ -1,4 +1,7 @@
+//https://developer.tomtom.com/blog/build-different/adding-tomtom-maps-modern-react-app
 import React from 'react';
+import '@tomtom-international/web-sdk-maps/dist/maps.css'
+import tt from '@tomtom-international/web-sdk-maps';
 
 
 
