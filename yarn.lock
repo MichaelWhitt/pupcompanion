@@ -2027,7 +2027,7 @@
     "@svgr/plugin-svgo" "^5.5.0"
     loader-utils "^2.0.0"
 
-"@tomtom-international/web-sdk-maps@latest":
+"@tomtom-international/web-sdk-maps@^6.15.0", "@tomtom-international/web-sdk-maps@latest":
   version "6.15.0"
   resolved "https://registry.yarnpkg.com/@tomtom-international/web-sdk-maps/-/web-sdk-maps-6.15.0.tgz#0446cd336a62cf106cba67a092f86446dfd64709"
   integrity sha512-LsfvX09OXUg5pEaae0e0uKUQi7bjTeFlZoG2cZsqaaWZ0TDuz15I2pTchHuZ5KCmRQlyMZ6c66RKTh6l3OAtEQ==
@@ -2051,7 +2051,7 @@
     "@tomtom-international/web-sdk-services" latest
     lodash.debounce "4.0.8"
 
-"@tomtom-international/web-sdk-services@latest":
+"@tomtom-international/web-sdk-services@^6.15.0", "@tomtom-international/web-sdk-services@latest":
   version "6.15.0"
   resolved "https://registry.yarnpkg.com/@tomtom-international/web-sdk-services/-/web-sdk-services-6.15.0.tgz#b4dd661c9e66add7633c73a5a129f0f1086cce32"
   integrity sha512-izs5s0Iy7+dKRsINpevPBu8IICpqiIuh6BHesQFW1+AfGEUb/XpAMPAaGy+EP8EYcdgFgpkx1JyiZkUg1Ks3Hw==

@@ -11,7 +11,7 @@ export const RESULTS = [
         feedDog: "Yes",
         location: {
             addressStreet: "2020 south 45th", 
-            addressCity: "lincoln", 
+    addressCity: "lincoln", 
             addressState: "Nebraska"}
     },
     {

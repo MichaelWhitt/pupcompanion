@@ -64,6 +64,11 @@ font-weight: 700;
   padding-top: 150px;
 }
 
+#mapContainer {
+  width: 500px;
+  height: 500px;
+}
+
 #instructionsText {
   color: white;
   font-family: 'Share';

@@ -3,7 +3,7 @@ import Landing from './components/LandingComponent';
 import Header from './components/Header';
 import Search from './components/Search'
 import './App.css';
-import RenderMap from './components/Map';
+
 
 function App(){
   
@@ -12,10 +12,8 @@ function App(){
       <Header/>
       <Landing/>
       <Search/>
-      {/* <div id="mapContainer"></div>
-      {useEffect(() =>
-      <RenderMap/>
-      )} */}
+      
+     
       
       
   </div>
