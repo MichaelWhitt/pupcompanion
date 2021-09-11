@@ -12,10 +12,6 @@ function App(){
       <Header/>
       <Landing/>
       <Search/>
-      
-     
-      
-      
   </div>
   )
 }

@@ -13,13 +13,13 @@ function Search(props) {
     //array destructering
     const [searchName, setSearchName] = useState("");
     const [map, setMap] = useState(null);
-
     
+
 
     var APIKEY = "OTesSbZQ5Tvq0TUHV8gKbv2ecpFPAaz2";
     var Dallas = [-96.79621, 32.77798];
     
-    tt.setProductInfo('<your-product-name>', '<your-product-version>');
+    //tt.setProductInfo('<your-product-name>', '<your-product-version>');
 
     useEffect( () => { 
         const createdMap = tt.map({
@@ -31,12 +31,6 @@ function Search(props) {
         setMap(createdMap);
     }, [] )
     
-    // var map = tt.map({
-    //         key: APIKEY,
-    //         container: "mapContainer", 
-    //         center: Dallas,
-    //         zoom: 14
-    //     });
 
     var moveMap = function(lnglat){
         map.flyTo({
@@ -49,15 +43,19 @@ function Search(props) {
         console.log(result);
         console.log(result.results);
         console.log(result.results.length);
+        const res = document.getElementById("resultsText");
+        
+        
         result.results.map(r => console.log(r.poi.name + r.poi.phone + r.poi.url))
         if (result){
+            
             for (let x = 0; x < result.results.length; x++){
-                var marker = new tt.Marker()
-                .setLngLat(result.results[x].position)
-                .addTo(map);
+                
+                new tt.Marker().setLngLat(result.results[x].position).addTo(map);
                 var newDiv = document.createElement("div");
                 newDiv.innerHTML = `${x + 1}: ${result.results[x].poi.name}`
-                document.body.append(newDiv);
+                res.append(newDiv);
+                
             } 
         }
     }
