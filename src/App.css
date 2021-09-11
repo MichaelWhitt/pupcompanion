@@ -91,11 +91,11 @@ font-weight: 700;
   color: black;
 }
 
-#resultCard {
+.card {
   margin-top: 10px;
 }
 
-#resultsCard:hover {
+.card:hover {
   box-shadow: 0 0 15px #aaa;
   transition-duration: .3s;
 }
@@ -110,8 +110,7 @@ font-weight: 700;
 #resultRating{
   color: red;
 }
-
-#resultsCard > div {
+.card > div {
   --bs-gutter-x: 0;
   border-radius: 5px;
 }

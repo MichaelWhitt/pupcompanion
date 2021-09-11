@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {Card} from 'react-bootstrap';
 // import {RESULTS} from '../shared/results';
 // import ShowResults from './SearchComponent';
 //https://developer.tomtom.com/blog/build-different/adding-tomtom-maps-modern-react-app
@@ -43,18 +44,30 @@ function Search(props) {
         console.log(result);
         console.log(result.results);
         console.log(result.results.length);
-        const res = document.getElementById("resultsText");
-        
         
         result.results.map(r => console.log(r.poi.name + r.poi.phone + r.poi.url))
+
         if (result){
-            
+            //result.results.length in the for loop for up to 10 nearest options
             for (let x = 0; x < result.results.length; x++){
-                
+                //creates marker on map
                 new tt.Marker().setLngLat(result.results[x].position).addTo(map);
-                var newDiv = document.createElement("div");
-                newDiv.innerHTML = `${x + 1}: ${result.results[x].poi.name}`
-                res.append(newDiv);
+                //creates card for each object
+                const newCard = document.createElement("div");
+                newCard.classList.add("card");
+                //creates + appends card header for each object
+                const newCardHeader = document.createElement("div");
+                newCardHeader.classList.add("card-header");
+                newCardHeader.innerHTML=`${x + 1}: ${result.results[x].poi.name}`;
+                newCard.append(newCardHeader)
+                //creates + appends card body for each object
+                const newCardBody = document.createElement("div");
+                newCardBody.classList.add("card-body");
+                newCardBody.innerHTML="Body";
+                newCard.append(newCardBody);
+
+                // newCard.innerHTML = `${x + 1}: ${result.results[x].poi.name}`
+                document.getElementById("resultsText").append(newCard);
                 
             } 
         }
@@ -85,7 +98,7 @@ function Search(props) {
                         <div className="col-6" id="resultsBox">
                             <div id="resultsText">
                                 <b className="d-flex">Results</b>
-                                {/* <ShowResults/> */}
+                                    {/* results go here */}
                             </div>
                         </div>
                     </div>    
