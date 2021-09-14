@@ -148,7 +148,7 @@ function Search(props) {
                     <div className="row text-center" id="searchDiv">
                         <div className="col-6">
                             <input type="text" id="query" value={searchName} onChange={handleInputChange} placeholder='Ex: "Restaurants"'/>
-                            <button onClick={search} id='searchBtn'>SEARCH</button>
+                            <button onClick={search} id='searchBtn' autofill="off" autocomplete="off">SEARCH</button>
                             <div id="mapContainer" className="mapContainer"></div>
                         </div>
                         <div className="col-6" id="resultsBox">
