@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
-class Header extends Component {
-render(){
+function Header(props) {
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="navbar">
@@ -17,7 +16,7 @@ render(){
                             <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Search</a>
+                            <a class="nav-link" href="#section2">Search</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Profile</a>
@@ -31,6 +30,6 @@ render(){
         </div>
     )
 }
-}
+
 
 export default Header;

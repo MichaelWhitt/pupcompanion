@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Card} from 'react-bootstrap';
+import {dogData} from "../shared/DogData"
 // import {RESULTS} from '../shared/results';
 // import ShowResults from './SearchComponent';
 //https://developer.tomtom.com/blog/build-different/adding-tomtom-maps-modern-react-app
@@ -44,12 +44,18 @@ function Search(props) {
         console.log(result);
         console.log(result.results);
         console.log(result.results.length);
+
+        
         
         result.results.map(r => console.log(r.poi.name + r.poi.phone + r.poi.url))
 
         if (result){
             //result.results.length in the for loop for up to 10 nearest options
             for (let x = 0; x < result.results.length; x++){
+                const randomRating = ((Math.random() * 2) + 3).toFixed(1);
+                const newRating = document.createElement("span");
+                newRating.id = "rating";
+                newRating.innerHTML=randomRating;
                 //creates marker on map
                 new tt.Marker().setLngLat(result.results[x].position).addTo(map);
                 //creates card for each object
@@ -58,12 +64,22 @@ function Search(props) {
                 //creates + appends card header for each object
                 const newCardHeader = document.createElement("div");
                 newCardHeader.classList.add("card-header");
-                newCardHeader.innerHTML=`${x + 1}: ${result.results[x].poi.name}`;
+                newCardHeader.innerHTML=`<b style='color:white'>${result.results[x].poi.name}</b>`;
+                newCardHeader.append(newRating)
                 newCard.append(newCardHeader)
+                
                 //creates + appends card body for each object
                 const newCardBody = document.createElement("div");
+                
                 newCardBody.classList.add("card-body");
-                newCardBody.innerHTML="Body";
+                newCardBody.innerHTML=`
+                Allows Dog: ${dogData[x].allowsDog} | Seating: ${dogData[x].seating} | Dog Snacks: ${dogData[x].feedDog}
+                <br>
+                ${result.results[x].poi.phone}
+                <br>
+                ${result.results[x].address.freeformAddress}
+
+                `;
                 newCard.append(newCardBody);
 
                 // newCard.innerHTML = `${x + 1}: ${result.results[x].poi.name}`
@@ -92,7 +108,7 @@ function Search(props) {
                     <div className="row text-center" id="searchDiv">
                         <div className="col-6">
                         <input type="text" id="query" value={searchName} onChange={handleInputChange}/>
-                            <button onClick={search}>SEARCH</button>
+                            <button onClick={search} id='searchBtn'>SEARCH</button>
                             <div id="mapContainer" className="mapContainer"></div>
                         </div>
                         <div className="col-6" id="resultsBox">

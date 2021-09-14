@@ -1,12 +1,7 @@
 import React, {Component} from 'react';
 
-class Landing extends Component {
-    constructor(props){
-        super(props);
-        this.state = {};
-    }
+function Landing(props) {
     
-    render(){
         return(
             <div id="section1">
                 <div className="container d-flex flex-row-reverse">
@@ -25,6 +20,6 @@ class Landing extends Component {
             </div>
         )
     }    
-}
+
 
 export default Landing;
