@@ -19,10 +19,7 @@ function Header(props) {
                             <a class="nav-link" href="#section2">Search</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#section3">Contact</a>
                         </li>
                     </ul>
                 </div>

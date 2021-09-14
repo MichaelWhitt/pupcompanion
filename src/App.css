@@ -65,9 +65,10 @@ font-weight: 700;
 }
 
 #mapContainer {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   margin-top: 5px;
+  box-shadow: 0 0 5px #007bff
 }
 
 #mapContainer > svg {
@@ -78,6 +79,16 @@ font-weight: 700;
   color: white;
   font-family: 'Share';
   font-size: 2rem;
+}
+
+#marker{
+  background-color: red;
+  width: 50px;
+  height: 50px;
+}
+
+#marker:hover{
+  background-color: blue;
 }
 
 #rating {
@@ -108,7 +119,7 @@ font-weight: 700;
 }
 
 #resultsBox {
-  width: 45%;
+  width: 50%;
   height: 500px;
   border-radius: 15px;
   color: black;
@@ -161,9 +172,29 @@ font-weight: 700;
 /*Section 3 Contact Us*/
 #section3 {
   background-color: white;
+  padding-top: 75px;
 }
 
 #banner {
   background-color: #007bff;
   color: white;
 }
+
+i {
+  font-size: 30px;
+}
+
+
+@media (max-width: 900px){
+
+  #resultsBoX {
+    width: 20%;
+
+  }
+
+  #mapContainer{
+    width: 220px;
+    height: 220px;
+  }
+  
+  }
