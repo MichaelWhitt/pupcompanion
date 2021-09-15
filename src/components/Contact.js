@@ -30,7 +30,7 @@ function Contact(props){
                         <div>LinkedIn</div>
                     </div>
                     <div className="col-4">
-                        <a href="https://www.linkedin.com/in/michaeldwhitt" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.michaeldwhitt.com" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faBriefcase} style={{fontSize:80}}/>
                         </a>
                         <div>Portfolio</div>
