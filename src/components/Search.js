@@ -6,6 +6,8 @@ import {dogData} from "../shared/DogData"
 import '@tomtom-international/web-sdk-maps/dist/maps.css';
 import tt from '@tomtom-international/web-sdk-maps';
 import {services} from '@tomtom-international/web-sdk-services';
+import CardHeader from 'react-bootstrap/esm/CardHeader';
+import { Card } from 'react-bootstrap';
 
 
 
@@ -46,13 +48,18 @@ function Search(props) {
         console.log(result);
         console.log(result.results);
         console.log(result.results.length);
+        document.getElementById("resultsText").innerHTML = "";
+        document.getElementById("resultsBoxCard").style.opacity = 1;
         
         
         
         result.results.map(r => console.log(r.poi.name + r.poi.phone + r.poi.url))
 
         if (result){
-            
+            const prevSearch = document.getElementById("prevSearchResults");
+            prevSearch.innerHTML = `
+            ${prevSearch.innerHTML}  
+            ${result.results[0].poi.categories}<br/>`.toUpperCase()
             //result.results.length in the for loop for up to 10 nearest options
             for (let x = 0; x < result.results.length; x++){
                 //creates custom marker on map
@@ -119,16 +126,11 @@ function Search(props) {
                 
 
                 // newCard.innerHTML = `${x + 1}: ${result.results[x].poi.name}`
-                document.getElementById("resultsText").append(newCard);
-                
-                
-                
+                document.getElementById("resultsText").append(newCard); 
             } 
         }
     }
     
-    
-
     var search = function(){
         
         services.fuzzySearch({
@@ -144,16 +146,30 @@ function Search(props) {
 
         return(
             <div id="section2" >
-                <div className="container">
-                    <div className="row text-center" id="searchDiv">
+                <div className="container" id="s2container">
+                    <div className="row" id="searchDiv">
                         <div className="col-6">
-                            <input type="text" id="query" value={searchName} onChange={handleInputChange} placeholder='Ex: "Restaurants"'/>
-                            <button onClick={search} id='searchBtn' autofill="off" autocomplete="off">SEARCH</button>
-                            <div id="mapContainer" className="mapContainer"></div>
+                            <div className="d-flex">
+                                <input type="text" id="query" value={searchName} onChange={handleInputChange} placeholder='Ex: "Restaurants"'/>
+                                <button onClick={search} id='searchBtn' autofill="off" autocomplete="off">SEARCH</button>
+                            </div>
+                            <div id="mapContainerOutterDiv">
+                                <div id="mapContainer" className="mapContainer"></div>
+                            </div>
+                            <div>  
+                                <br/>
+                                <h4>Previous Search Categories</h4>
+                                <hr/>
+                                <div id="prevSearchResults">
+                                    {/*prev results go here */}
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-6" id="resultsBox">
-                            <div id="resultsText">
-                                <b className="d-flex">Results</b>
+                        <div className="col-12" id="resultsBox">
+                            <Card id="resultsBoxCard">
+                                <CardHeader>Results</CardHeader>
+                            </Card>
+                            <div id="resultsText" className="d-flex" style={{flexWrap: 'wrap'}}>
                                     {/* results go here */}
                             </div>
                         </div>
