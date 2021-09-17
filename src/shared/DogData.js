@@ -74,6 +74,54 @@ export const dogData = [
     },
     {
         id: 12,
+        allowsDog: "No",
+        seating: "None",
+        feedDog: "No"
+    },
+    {
+        id: 13,
+        allowsDog: "Yes",
+        seating: "Outside",
+        feedDog: "No"
+    },
+    {
+        id: 14,
+        allowsDog: "Yes",
+        seating: "Inside",
+        feedDog: "Yes"
+    },
+    {
+        id: 15,
+        allowsDog: "Yes",
+        seating: "None",
+        feedDog: "No"
+    },
+    {
+        id: 16,
+        allowsDog: "Yes",
+        seating: "Outside",
+        feedDog: "No"
+    },
+    {
+        id: 17,
+        allowsDog: "Yes",
+        seating: "Inside",
+        feedDog: "Yes"
+    },
+    {
+        id: 18,
+        allowsDog: "No",
+        seating: "None",
+        feedDog: "No"
+    },
+    {
+        id: 19,
+        allowsDog: "Yes",
+        seating: "Inside",
+        feedDog: "Yes"
+    },
+    {
+        id: 20,
         allowsDog: "Yes",
         seating: "Inside",
         feedDog: "Yes"
