@@ -5,8 +5,9 @@ body {
 
 #section1, #section2, #section3 {
   
-  height: 100vh;
+  min-height:100vh;
   width: 100%;
+  overflow-y: initial;
   
 }
 
@@ -59,21 +60,16 @@ font-weight: 700;
 /*Section 2 "Search.js"*/
 #section2 {
   background-color: #fff;
+  
 }
-
-
 
 #searchDiv {
   padding-top: 75px;
 }
 
-#mapContainerOutterDiv{
-  margin: 0;
-  
-}
 #mapContainer {
   width: 100%;
-  height: 600px;
+  height: 30vw;
   margin-top: 5px;
   box-shadow: 0 0 5px #007bff;
   
@@ -153,11 +149,12 @@ font-weight: 700;
   
   margin: 10px;
   width: 45%;
+  box-shadow: 0 0 5px #aaa
 }
 
 
 .card:hover {
-  box-shadow: 0 0 15px #aaa;
+  box-shadow: 0 0 5px black;
   transition-duration: .3s;
 }
 
@@ -195,14 +192,10 @@ font-weight: 700;
 
 /*Section 3 Contact Us*/
 #section3 {
-  
+  margin-top: 100px;
   padding-top: 55px;
 }
 
-#s3container{
-  width: 100vw;
-  
-}
 
 #banner {
   background-color: #007bff;
@@ -230,7 +223,7 @@ i {
   }
 
   #mapContainer{
-    width: 250px;
+    width: 80vw;
     height: 250px;
     margin-bottom: 20px;
   }

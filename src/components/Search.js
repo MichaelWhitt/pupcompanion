@@ -115,12 +115,15 @@ function Search(props) {
                     }
                 }
 
-                newCardBody.innerHTML=`
-                Allows Dog: ${dogData[x].allowsDog} | Seating: ${dogData[x].seating} | Dog Snacks: ${dogData[x].feedDog}
+                newCardBody.innerHTML=`<div class="text-center">
+                <div>Allows Dog: ${dogData[x].allowsDog}</div> 
+                <div>Seating: ${dogData[x].seating}</div> 
+                <div>Dog Snacks: ${dogData[x].feedDog}</div> 
                 <hr>
                 ${phoneNum(result.results[x].poi.phone)}
                 <br>
                 ${result.results[x].address.freeformAddress}
+                </div>
                 `;
                 newCard.append(newCardBody);
                 
